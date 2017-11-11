@@ -9,24 +9,24 @@
 <body>
     <script>
         /**********（1）左开右闭区间 ( ]**********/
-        // var a=1;
-        // var b=100;
-        // var s= parseInt(Math.random()*b);
+        // var a=3;
+        // var b=6;
+        // var s= parseInt(Math.random()*(b-a))+(a+1);
         // console.log(s);
         /**********（2）左闭右开区间 [ )**********/
         // var a=1;
-        // var b=100;
-        // var s= parseInt(Math.random()*b+1);
+        // var b=5;
+        // var s= parseInt(Math.random()*(b-a))+a;
         // console.log(s);
         /**********（3）双开区间    （ ）*********/
-        // var a=1;
-        // var b=100;
-        // var s= parseInt(Math.random()*(b-a+1)+a);
-        // console.log(s);
+        var a=1;
+        var b=5;
+        var s= parseInt(Math.random()*(b-a-1)+(a+1));
+        console.log(s);
         /**********（4）双闭区间     [ ]**********/
         // var a=1;
-        // var b=100;
-        // var s= parseInt(Math.random()*b-1)+(a+1);
+        // var b=10;
+        // var s= parseInt(Math.random()*(b-a+1)+a);
         // console.log(s);
             
     </script>
