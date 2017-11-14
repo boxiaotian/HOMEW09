@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //第一题
+        // var a= prompt("请输入任意数：")
+        // var s= /^-?\d\.?\d*$/g;
+        // if(s.test(a)){
+        //     alert("是");
+        // }else{
+        //     alert("请重新输入");
+        // }
+        //第二题
+        // var a = prompt("请输入本地电话：");
+        // var s = /^0\d{2,3}-\d{8}$/g;
+        // if(s.test(a)){
+        //     alert("是");
+        // }else{
+        //     alert("请重新输入");
+        // }
+        //第三题
+        // var a = prompt("请输入一个网址：");
+        // var n = a.replace(a,"www.ucai.com");
+        // console.log(n);
+        //第四题
+        // function trim(str){
+        //     var a = /^\s*/g;
+        //     str =str.replace(a,"");
+        //     console.log(str);
+        // }trim(prompt("请输入任意长度的字符"));
+        //第五题
+        // var reg = /^<.+>.+<.+>$/;
+        // var str = "<p class='demo'>hello ucai</p>".replace(/^<.+>(.+)<.+>$/,function(match,$1){
+        //     return $1;
+        // })
+        // console.log(str);
+        //第六题
+    //     var str = ("div#demo.demo").replace(/^\b(\w+)\b#\b(\w+)\b\.\b(\w+)\b$/,function(match,$1,$2,$3){
+    //     return "<"+$1+" id=\"" + $2+ "\" class=\""+ $3+ "\"><\/" + $1 +">"
+    //     })
+    // console.log(str);
+    //第七题    
+    // function rr(val){
+    //      reg = /^[\u4E00-\u9FA5]{2,4}$/g;
+    //       if(!reg.test(val)){
+    //             document.getElementById('t').innerHTML = '不符合标准！';
+    //              }else{
+    //                    document.getElementById('t').innerHTML = '符合标准！';
+    //                     }
+    //                     }
+        //第八题
+        var a = prompt("输入昵称");
+        var reg = /^[\w\u4e00-\u9fa5]{6,8}$/;
+        if(reg.test(a)){
+            alert("昵称正常");
+        }else{
+            alert("昵称非法");
+        }
+    </script>
+</body>
+</html>
