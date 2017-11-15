@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 20px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一题 -->
+    <!-- <span id="a1">十天内免登录</span>
+    <script>
+        var a = document.getElementById("a1");
+        a.onmouseover=function(){
+           a.style.border = "1px solid yellow";
+        }
+        a.onmouseout=function(){
+            a.style.border = "none";
+        }
+    </script> -->
+    <!-- 第二题 -->
+    <!-- <span id="a">新浪娱乐讯 北京时间11月15日消息，据香港媒体报道，毛舜筠[微博]主演的电影《黄金花》前晚举行首映礼，好友蔡少芬[微博]
+        、陈法蓉[微博]及余安安[微博]等一齐来支持。毛舜筠在戏中扮演患有自闭症儿童的母亲，演技再受到挑战，她坦言演出前曾探访过
+        这类别的家庭，深感身为家长的很伟大，要照顾自闭症的子女实在不是简单的事情。</span>
+        <div>
+            <button id="btn1">字体变大</button>
+            <button id="btn2">字体变小</button>
+    </div>
+        <script>
+            var span = document.getElementById("a");
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            btn1.onclick=function () {
+                span.style.fontSize="40px";
+                }
+            btn2.onclick=function(){
+                span.style.fontSize="16px";
+            }
+    </script> -->
+    <script>
+        var examplearr=[65,566,5646,56466,15,51,54,98,47];
+function sortarr(arr){
+    for(i=0;i<arr.length-1;i++){
+        for(j=0;j<arr.length-1-i;j++){
+            if(arr[j]>arr[j+1]){
+                var temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    return arr;
+}
+sortarr(examplearr);
+console.log(examplearr);
+    </script>
+</body>
+</html>
