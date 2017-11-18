@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ol{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border-top: 2px solid green;
+            border-left: 1px solid #999;
+            width: 303px;
+            height: 31px;
+        }
+    ol li{
+        width: 100px;
+            height: 31px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #ccc;
+        float: left;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+    }
+    .current1{
+        background: #fff;
+        font-weight: bold;
+            height: 31px;
+        text-decoration: underline red;
+        border-bottom: none;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    div{
+        width: 304px;
+        height: 150px;
+            display: none;
+    }
+    ul li{
+        list-style: none;
+    }
+    ul li:hover{
+        text-decoration: underline red;
+    }
+    </style>
+</head>
+<body>
+    <ol>
+        <li class="current1"><a href="#">新闻</a></li>
+        <li>图片</li>
+        <li>军事</li>
+    </ol>
+    <div style="display:block">
+        <ul>
+            <li>新闻新闻新闻新闻新闻新闻新闻新闻</li>
+            <li>新闻新闻新闻新闻新闻新闻新闻新闻</li>
+            <li>新闻新闻新闻新闻新闻新闻新闻新闻</li>
+            <li>新闻新闻新闻新闻新闻新闻新闻新闻</li>
+            <li>新闻新闻新闻新闻新闻新闻新闻新闻</li>
+        </ul>
+    </div>
+    <div>
+        <img src="images/0.jpg" width="304px" height="150px"/>
+    </div>
+    <div>        
+        <ul>
+            <li>军事军事军事军事军事军事军事军事</li>
+            <li>军事军事军事军事军事军事军事军事</li>
+            <li>军事军事军事军事军事军事军事军事</li>
+            <li>军事军事军事军事军事军事军事军事</li>
+            <li>军事军事军事军事军事军事军事军事</li>
+        </ul>
+    </div>
+    <script>
+        
+        window.onload=function () {
+            var int = document.querySelectorAll("ol li");
+            var box = document.getElementsByTagName("div");
+            for(var i=0;i<int.length;i++){
+                int[i].index=i;
+                int[i].onclick=function () {
+                    for (var i=0;i<int.length;i++){
+                        int[i].className="";
+                        box[i].style.display="none"
+                    }
+                    box[this.index].style.display="block";
+                    this.className="current1"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

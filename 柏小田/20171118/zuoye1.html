@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .b{
+        background: green;
+    }
+    </style>
+</head>
+<body>
+    <table width="600px" border="1px" cellspacing="0" cellpadding="0" bordercolor="#000">
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="b">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <button style="width:50px; height:40px; border-radius:5px;background:yellow" id="button1">变色</button>
+    <button style="width:50px; height:40px; border-radius:5px;background:yellow" id="button2">会色</button>
+    <script>
+        var oTrs= document.querySelectorAll("tr");
+        var oBtton1 = document.getElementById("button1");
+        var oBtton2 = document.getElementById("button2");
+        
+        oBtton1.onclick = function (){
+        for(var i = 0;i <oTrs.length;i+=2){
+                oTrs[i].style.background = "#fff";
+           for(var j=1;j<oTrs.length;j+=2){
+            oTrs[j].style.background = "green";
+           }
+        }
+         }
+         oBtton2.onclick = function (){
+        for(var i = 0;i <oTrs.length;i+=2){
+                oTrs[i].style.background = "green";
+           for(var j=1;j<oTrs.length;j+=2){
+            oTrs[j].style.background = "#fff";
+           }
+        }
+         }
+    </script>
+</body>
+</html>

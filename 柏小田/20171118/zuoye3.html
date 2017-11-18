@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function () {
+            var p = document.getElementById("pp");
+            var int = document.getElementsByTagName("input");
+            p.onclick=function () {
+                for(var i=0 ; i<int.length; i++){
+                    int[i].checked=true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<p id="pp">全选</p>
+<input type="checkbox">吃饭<br>
+<input type="checkbox">睡觉<br>
+<input type="checkbox">打游戏<br>
+<input type="checkbox">吃饭<br>
+<input type="checkbox">睡觉<br>
+<input type="checkbox">打游戏<br>
+<input type="checkbox">吃饭<br>
+<input type="checkbox">睡觉<br>
+<input type="checkbox">打游戏<br>
+</body>
+</html>
