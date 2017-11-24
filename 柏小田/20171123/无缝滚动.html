@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无缝滚动</title>
+    <style>
+        body{margin: 0;}
+        div{
+            width: 800px;
+            height: 130px;
+            border: 10px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        div ul{
+            margin: 0;
+            padding: 0;
+            width: 5000px;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        div ul li{
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#"><img src="./img/0.png" alt="0"></a></li>
+            <li><a href="#"><img src="./img/1.png" alt="1"></a></li>
+            <li><a href="#"><img src="./img/2.png" alt="2"></a></li>
+            <li><a href="#"><img src="./img/3.png" alt="3"></a></li>
+            <li><a href="#"><img src="./img/4.png" alt="4"></a></li>
+            <li><a href="#"><img src="./img/5.png" alt="5"></a></li>
+            <li><a href="#"><img src="./img/6.png" alt="6"></a></li>
+            <li><a href="#"><img src="./img/7.png" alt="7"></a></li>
+        </ul>
+    </div>
+    <script src="js/animate_2.1.js"></script>
+    <script>
+        var oUL=document.querySelector("ul");
+        var oLis=document.querySelectorAll("ul li");
+        var liLength =oLis.length;
+        oUL.innerHTML+=oUL.innerHTML;
+        var idx =0;
+        function roll(){
+            idx++;
+            animate(oUL,{'left':-210*idx},1000,'Linear',function(){
+                if(idx>liLength-1){
+                    idx=0;
+                    oUL.style.left=0;
+                }
+            })
+        }
+        var timer=setInterval(roll,2000);
+        oUL.onmouseover = function () {
+            clearInterval(timer);
+        };
+        oUL.onmouseout = function () {
+        timer=setInterval(roll,2000);
+        };
+    </script>
+</body>
+</html>

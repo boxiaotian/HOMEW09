@@ -5,18 +5,27 @@
     <title>Title</title>
     <script>
         window.onload=function () {
-            var p = document.getElementById("pp");
+            var button = document.getElementById("pp");
+            var button1 = document.getElementById("pp1");
             var int = document.getElementsByTagName("input");
-            p.onclick=function () {
+            button.onclick=function () {
                 for(var i=0 ; i<int.length; i++){
-                    int[i].checked=true;
+                    
+                    for(var j=0 ; j<int.length;j++){
+                        if(i<int.length){
+                            int[i].checked=true;
+                        }else{
+                            int[j].checked=false;
+                        }
+                }
                 }
             }
         }
     </script>
 </head>
 <body>
-<p id="pp">全选</p>
+<button id="pp">全选</button><br>
+<button id="pp1">不全选</button><br>
 <input type="checkbox">吃饭<br>
 <input type="checkbox">睡觉<br>
 <input type="checkbox">打游戏<br>
@@ -26,5 +35,24 @@
 <input type="checkbox">吃饭<br>
 <input type="checkbox">睡觉<br>
 <input type="checkbox">打游戏<br>
+<script>
+    // var oInput = document.querySelectorAll("input[type='checkbox']");
+    // var oAllbtn = document.querySelectorAll("#pp")[0];
+    // var isAllselect =false;
+    // oAllbtn.onclick = function (){
+    //     if(!isAllselect){
+    //         for(var i = 0;i < oInput.length; i++){
+    //             oInput[i],setAttribute("checked","checked");
+    //         }
+    //         this.value = "全不选";
+    //     }else{
+    //         for(var j = 0;j < oInput.length; j++){
+    //             oInput[j].removeAttribute("checked");
+    //         }
+    //         this.value = "全选"
+    //     }
+    //     isAllselect = !isAllselect;
+    // };
+</script>
 </body>
-</html>
+</html>                                                                                                 
